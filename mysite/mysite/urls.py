@@ -5,7 +5,7 @@ from mysite.myview import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',('^HELLO/$',hello),('^$',main_page),('^nowtime/$',curent_time)
-    ,(r'^time/plus/(\d{1,2})/$',houes_ahead)
+    ,(r'^time/plus/(\d{1,2})/$',houes_ahead),('^showperson/$',show_person)
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^mysite/', include('mysite.foo.urls')),
