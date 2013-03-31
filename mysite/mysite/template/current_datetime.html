@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{#子模板不必定义父模板中所有的代码块#}
+{#如果你需要访问父模板中的块的内容，使用 {{ block.super }}这个标签吧，这一个魔法变量将会表现出父模板中的内容。 如果只想在上级代码块基础上添加内容，而不是全部重载，该变量就显得非常有用了。#}
+{% block title %} The Current Time{% endblock %}
+{% block content %}It is now{{ current_date }}{% endblock %}

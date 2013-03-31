@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<h1>my helpful timestamp site</h1>
+{#{% block %}标签告诉模板引擎字模板可以重载这部分#}
+{% block content %}{% endblock %}
+{% block footer %}
+    <hr>
+    <p>thanks for visiting my site.</p>
+{% endblock %}
+</body>
+</html>

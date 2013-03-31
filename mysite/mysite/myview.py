@@ -5,11 +5,13 @@ import datetime
 from django.template import Template,Context
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
+import mysqldb
+from django.db import connection
 def hello(request):
     return HttpResponse("""<div>this is a div</div><input type="button">""")
 def curent_time(request):
     now = datetime.datetime.now()
-    t = get_template('current_date.html')
+    t = get_template('current_datetime.html')
     cur_date=t.render(Context({'current_date':now}))
     return HttpResponse(cur_date)
 def main_page(request):
@@ -33,3 +35,4 @@ def show_person(request):
     return render_to_response('person.html',{'person':person_info})
     #如果这里的变量名和模板中的变量名一样（如将上面的person_info改为person），则可以用locals()将变量的key和value自动映射上
 #    return render_to_response('person.html',locals())
+current = connection.cursor()
