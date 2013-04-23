@@ -5,7 +5,7 @@ import datetime
 from django.template import Template,Context
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
-import mysqldb
+#import mysqldb
 from django.db import connection
 def hello(request):
     return HttpResponse("""<div>this is a div</div><input type="button">""")

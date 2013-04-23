@@ -1,11 +1,11 @@
 from django.conf.urls import patterns, include, url
 from mysite.myview import *
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',('^HELLO/$',hello),('^$',main_page),('^nowtime/$',curent_time)
-    ,(r'^time/plus/(\d{1,2})/$',houes_ahead),('^showperson/$',show_person)
+    ,(r'^time/plus/(\d{1,2})/$',houes_ahead),('^showperson/$',show_person),
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^mysite/', include('mysite.foo.urls')),
@@ -14,5 +14,5 @@ urlpatterns = patterns('',('^HELLO/$',hello),('^$',main_page),('^nowtime/$',cure
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+     url(r'^admin/', include(admin.site.urls)),
 )
